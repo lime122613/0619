@@ -23,15 +23,15 @@ if st.button("응원 메시지 받기"):
 				# OpenAI API 호출 (GPT-4o-mini 모델 사용)
 				response = client.chat.completions.create(
 					model="gpt-4o-mini",
-					messages=\[
+					messages=[
 						{"role": "system", "content": "당신은 학생들을 진심으로 아끼고 다정하게 격려하는 멘토입니다. 3\~4문장으로 힘이 되는 응원 메시지를 작성해주세요. 이모지도 적절히 사용해주세요."},
-						{"role": "user", "content": f"\{name\} 학생이 \{exam_name\}을(를) 준비하고 있습니다. 응원해주세요!"},
-					\],
+						{"role": "user", "content": f"{name} 학생이 {exam_name}을(를) 준비하고 있습니다. 응원해주세요!"},
+					],
 					temperature=0.7  # 창의성 조절 (0\~2)
 				)
 
 				# 결과 출력
-				message = response.choices\[0\].message.content
+				message = response.choices[0].message.content
 				st.success(message)
 				st.balloons()  # 풍선 애니메이션 효과
 
