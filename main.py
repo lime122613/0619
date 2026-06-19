@@ -4,7 +4,7 @@ from openai import OpenAI
 
 # 1. OpenAI 클라이언트 설정
 # 스트림릿 클라우드의 Secrets에 저장된 API 키를 불러옵니다.
-client = OpenAI(api_key=st.secrets\["OPENAI_API_KEY"\])
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # 2. 웹 앱 화면 구성
 st.set_page_config(page_title="시험 응원봇", page_icon="🍀")
